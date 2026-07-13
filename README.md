@@ -133,8 +133,8 @@ This project is being built end-to-end as a hands-on engineering effort — ever
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/rajneeshkaur19/SentinelAI.git
-cd SentinelAI
+git clone https://github.com/rajneeshkaur19/Sentinel_AI.git
+cd Sentinel_AI
 ```
 
 ### 2. Frontend Setup
