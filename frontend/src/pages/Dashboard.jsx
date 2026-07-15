@@ -1,5 +1,14 @@
+import HeroSection from "../components/dashboard/HeroSection";
+
+
 function Dashboard() {
-  return <h1>Dashboard</h1>;
+  return(
+    <div className = "space-y-6 p-6">
+
+      <HeroSection/>
+    
+    </div>
+  );
 }
 
 export default Dashboard;
