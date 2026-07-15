@@ -4,7 +4,7 @@ function SidebarItem({ title, to}){
     return(
         <NavLink
            to = {to}
-           classname = {({ isActive }) =>
+           className = {({ isActive }) =>
             `block rounded-lg px-4 py-3 transition-all duration-200 ${
                 isActive 
                 ? "bg-cyan-500 text-white font-semibold"
