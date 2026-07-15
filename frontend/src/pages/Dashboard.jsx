@@ -2,6 +2,7 @@ import HeroSection from "../components/dashboard/HeroSection";
 import ThreatCard from "../components/dashboard/ThreatCard";
 import ScanCard from "../components/dashboard/ScanCard";
 import ReportsCard from "../components/dashboard/ReportsCard";
+import RecommendationCard from "../components/dashboard/RecommendationCard";
 function Dashboard() {
   return(
     <div className = "space-y-6 p-6">
@@ -12,6 +13,7 @@ function Dashboard() {
       <ThreatCard/>
       <ScanCard/>
       <ReportsCard/>
+      <RecommendationCard/>
       </div>
     
     </div>
