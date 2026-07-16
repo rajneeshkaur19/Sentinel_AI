@@ -7,7 +7,7 @@ function ThreatCard() {
 
                 <div>
                     <p className = "text-gray-500 text-sm">Threats Detected</p>
-                    <h2 className = "text-3xl font-bold mt-2">12</h2>
+                    <h2 className = "text-2xl font-bold mt-2 text-gray-800 "dark:text-white>12</h2>
                     <p className = "text-red-500 text-sm mt-2">   
                         ↑ 8% from yesterday
                     </p>

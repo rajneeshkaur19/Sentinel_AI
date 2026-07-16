@@ -14,7 +14,7 @@ function ScanCard(){
             <div className = "space-y-2 text-sm">
                 <div className = "flex justify-between">
                     <span className = "text-gray-500"> Files </span>
-                    <span className = "font-semibold">1,248</span>
+                    <span className = "font-semibold text-gray-900 dark:text-white">1,248</span>
                 </div>
                 <div className = "flex justify-between">
                     <span className = "text-gray-500"> Threats Found </span>

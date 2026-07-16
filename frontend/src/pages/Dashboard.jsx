@@ -3,6 +3,7 @@ import ThreatCard from "../components/dashboard/ThreatCard";
 import ScanCard from "../components/dashboard/ScanCard";
 import ReportsCard from "../components/dashboard/ReportsCard";
 import RecommendationCard from "../components/dashboard/RecommendationCard";
+import ActivityTable from "../components/dashboard/ActivityTable";
 function Dashboard() {
   return(
     <div className = "space-y-6 p-6">
@@ -14,6 +15,9 @@ function Dashboard() {
       <ScanCard/>
       <ReportsCard/>
       <RecommendationCard/>
+      <div className = "xl:col-span-2">
+        <ActivityTable/>
+      </div>
       </div>
     
     </div>

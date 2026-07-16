@@ -14,11 +14,11 @@ function ReportsCard(){
             <div className = "space-y-2 text-sm">
                 <div className = "flex justify-between">
                     <span className = "text-gray-500">Reports Generated</span>
-                    <span className = "font-semibold">24</span>
+                    <span className = "font-semibold text-gray-900 dark:text-white">24</span>
                 </div>
                 <div className = "flex justify-between">
                     <span className = "text-gray-500">Last Report</span>
-                    <span className = "font-semibold">Today</span>
+                    <span className = "font-semibold text-gray-900 dark:text-white">Today</span>
                 </div>
                 <div className = "flex justify-between">
                     <span className = "text-gray-500">Status</span>
