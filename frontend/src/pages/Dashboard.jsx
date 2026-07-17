@@ -7,6 +7,7 @@ import ActivityTable from "../components/dashboard/ActivityTable";
 import ThreatChart from "../components/dashboard/ThreatChart";
 import QuoteCard from "../components/dashboard/QuoteCard";
 import SafeFilesCard from "../components/dashboard/SafeFilesCard";
+import UploadCard from"../components/upload/UploadCard";
 function Dashboard() {
   return(
     <div className = "space-y-6 p-6">
@@ -25,6 +26,7 @@ function Dashboard() {
       <ThreatChart/>
       <QuoteCard/>
       <SafeFilesCard/>
+      <UploadCard/>
     </div>
   );
 }
