@@ -8,8 +8,10 @@ import ThreatChart from "../components/dashboard/ThreatChart";
 import QuoteCard from "../components/dashboard/QuoteCard";
 import SafeFilesCard from "../components/dashboard/SafeFilesCard";
 import UploadCard from"../components/upload/UploadCard";
+import Button from"../components/common/Button";
 function Dashboard() {
   return(
+    
     <div className = "space-y-6 p-6">
 
       <HeroSection/>
@@ -19,15 +21,29 @@ function Dashboard() {
       <ScanCard/>
       <ReportsCard/>
       <RecommendationCard/>
-      <div className = "xl:col-span-2">
-        <ActivityTable/>
-      </div>
+        <div className = "xl:col-span-2">
+          <ActivityTable/>
+        </div>
       </div>
       <ThreatChart/>
       <QuoteCard/>
       <SafeFilesCard/>
       <UploadCard/>
-    </div>
+
+      <div className="flex gap-4">
+        <Button>Primary</Button>
+        <Button variant="secondary">
+          Secondary
+        </Button>
+        <Button variant="outline">
+          Outline
+        </Button>
+        <Button variant="danger">
+          Danger
+        </Button>
+      </div>
+    </div>   
+
   );
 }
 
