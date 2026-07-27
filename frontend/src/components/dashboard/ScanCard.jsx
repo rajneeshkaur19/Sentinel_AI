@@ -1,32 +1,39 @@
 import { ScanSearch } from "lucide-react";
+import Card from "../common/Card";
+import Badge from "../common/Badge";
 
-function ScanCard(){
+export default function ScanCard(){
     return(
-        <div className = "bg-white dark:bg-slate-800 rounded-2xl shadow-md p-6 hover:shadow-lg transition">
-            <div className = "flex items-center justify-between mb-4">
-                <h2 className = "text-lg font-semibold text-gray-700 dark:text-white">
+        <Card>
+            <div className = "flex items-center justify-between mb-6">
+                <div>
+                    <h3 className = "text-lg font-semibold text-white">
                     Scan Status
-                </h2>
-                <div className = "bg-blue-100 p-3 rounded-full">
-                    <ScanSearch className = "text-blue-600" size = {24} />
+                    </h3>
+                    <p className = "rounded-xl bg-sky-500/10 p-3 text-sky-400">
+                    Latest system scan
+                    </p>
+                </div>
+                <div className = "rounded-xl bg-sky-500/10 p-3 text-sky-400">
+                    <ScanSearch size={24}/>
                 </div>
             </div>
-            <div className = "space-y-2 text-sm">
-                <div className = "flex justify-between">
-                    <span className = "text-gray-500"> Files </span>
-                    <span className = "font-semibold text-gray-900 dark:text-white">1,248</span>
+            <div className = "space-y-4">
+                <div className="flex justify-between">
+                    <span className = "text-slate-400">
+                        Files Scanned
+                    </span>
+                    <span className = "font-semibold text-white">1,248</span>
                 </div>
                 <div className = "flex justify-between">
-                    <span className = "text-gray-500"> Threats Found </span>
-                    <span className = "font-semibold text-red-500">3</span>
+                    <span className = "text-slate-400">Threats found</span>
+                    <span className = "font-semibold text-red-400">3</span>
                 </div>
-                <div className = "flex justify-between">
-                    <span className = "text-gray-500">Status</span>
-                    <span className = "font-semibold text-green-600">Completed</span>
+                <div className = "flex justify-between items-center">
+                    <span className = "text-slate-400">Status</span>
+                    <Badge variant = "success">completed</Badge>
                 </div>
             </div>
-        </div>
+        </Card>
     );
 }
-
-export default ScanCard;
