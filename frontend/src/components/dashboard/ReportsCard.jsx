@@ -1,32 +1,54 @@
 import { FileText } from "lucide-react";
+import Card from "../common/Card";
+import Badge from "../common/Badge";
 
-function ReportsCard(){
-    return(
-        <div className = "bg-white dark:bg-slate-800 rounded-2xl shadow-md p-6 hover:shadow-lg transition">
-            {/* Header */}
-            <div className = "flex items-center justify-between mb-4">
-                <h2 className = "text-lg font-semibold text-gray-700 dark:text-white"> Reports </h2>
-                <div className = "bg-green-100 p-3 rounded-full">
-                    <FileText className = "text-green-600" size = {24} />
-                </div>
-            </div>
-            {/*Reports Details*/}
-            <div className = "space-y-2 text-sm">
-                <div className = "flex justify-between">
-                    <span className = "text-gray-500">Reports Generated</span>
-                    <span className = "font-semibold text-gray-900 dark:text-white">24</span>
-                </div>
-                <div className = "flex justify-between">
-                    <span className = "text-gray-500">Last Report</span>
-                    <span className = "font-semibold text-gray-900 dark:text-white">Today</span>
-                </div>
-                <div className = "flex justify-between">
-                    <span className = "text-gray-500">Status</span>
-                    <span className = "font-semibold text-green-600">Updated</span>
-                </div>
-            </div>
+export default function ReportsCard() {
+  return (
+    <Card>
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h3 className="text-lg font-semibold text-white">
+            Reports
+          </h3>
+          <p className="text-sm text-slate-400">
+            Latest report activity
+          </p>
         </div>
-    );
-}
 
-export default ReportsCard;
+        <div className="rounded-xl bg-emerald-500/10 p-3 text-emerald-400">
+          <FileText size={24} />
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <div className="flex justify-between">
+          <span className="text-slate-400">
+            Reports Generated
+          </span>
+          <span className="font-semibold text-white">
+            24
+          </span>
+        </div>
+
+        <div className="flex justify-between">
+          <span className="text-slate-400">
+            Last Report
+          </span>
+          <span className="font-semibold text-white">
+            Today
+          </span>
+        </div>
+
+        <div className="flex justify-between items-center">
+          <span className="text-slate-400">
+            Status
+          </span>
+
+          <Badge variant="success">
+            Updated
+          </Badge>
+        </div>
+      </div>
+    </Card>
+  );
+}
