@@ -1,19 +1,26 @@
 import { NavLink } from
 "react-router-dom";
-function SidebarItem({ title, to}){
+function SidebarItem({ 
+    icon: Icon,
+    title,
+    to
+}){
     return(
         <NavLink
            to = {to}
            className = {({ isActive }) =>
-            `block rounded-lg px-4 py-3 transition-all duration-200 ${
+            `flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-300 ${
                 isActive 
-                ? "bg-cyan-500 text-white font-semibold"
-                : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                ? "bg-violet-600/20 border border-violet-500/40 text-white shadow-lg shadow-violet-500/20"
+                : "text-slate-300 hover:bg-slate-800/70 hover:text-violet-300 hover:-translate-x-1"
             
             }`
         }    
     >
-        {title}
+        {Icon && <Icon size={18}/>}
+        <span className = "font-medium">
+            {title}
+        </span>
         </NavLink>
 
     );
