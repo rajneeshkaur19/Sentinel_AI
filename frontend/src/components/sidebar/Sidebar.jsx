@@ -1,22 +1,47 @@
+import {
+  LayoutDashboard,
+  Shield,
+  Globe,
+  BarChart3,
+  Bot,
+  FileText,
+  Settings,
+} from "lucide-react";
 import SidebarItem from "./SidebarItem";
+import SidebarFooter from "./SidebarFooter";
 
 function Sidebar() {
   return (
-    <aside className="w-64 min-h-screen bg-slate-900 text-white p-6 shadow-xl">
-      <h1 className="text-3xl font-bold mb-10 text-cyan-400">
-        🛡 SentinelAI
-      </h1>
+    <aside className="flex min-h-screen w-72 flex-col border-r border-slate-800 bg-slate-950/95 px-6 py-8 backdrop-blur-xl">
+      {/*logo section*/}
+      <div className = "mb-10">
+        <div className = "flex items-center gap-3">
+          <div className = "flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-500 shadow-lg shadow-violet-500/30">
+          <Shield size = {26} className = "text-white"/>
+          </div>
+          <div>
+            <h1 className="text-2xl font-bold text-white">
+              🛡 SentinelAI
+            </h1>
+            <p className = "text-sm text-slate-400">
+              AI-Powered Security
+            </p>
+          </div>
+        </div>
+      </div>
 
-      <nav className="flex flex-col gap-3">
-        <SidebarItem title = "Dashboard" to = "/" />
-        <SidebarItem title = "URL Scanner" to = "/url-scanner" />
-        <SidebarItem title = "Malware Scanner" to = "/malware-scanner" />
-        <SidebarItem title = "Threat Intelligence" to = "/threat-intel" />
-        <SidebarItem title = "AI Assistant" to = "/ai-assistant" />
-        <SidebarItem title = "Reports" to = "/reports" />
-        <SidebarItem title = "Settings" to = "/settings" />
+      {/*Navigation*/}
+      <nav className="flex flex-col gap-2">
+        <SidebarItem icon = {LayoutDashboard} title = "Dashboard" to = "/" />
+        <SidebarItem icon = {Shield} title = "URL Scanner" to = "/url-scanner" />
+        <SidebarItem icon = {Globe} title = "Malware Scanner" to = "/malware-scanner" />
+        <SidebarItem icon = {BarChart3} title = "Threat Intelligence" to = "/threat-intel" />
+        <SidebarItem icon = {Bot} title = "AI Assistant" to = "/ai-assistant" />
+        <SidebarItem icon = {FileText} title = "Reports" to = "/reports" />
+        <SidebarItem icon = {Settings} title = "Settings" to = "/settings" />
 
       </nav>
+      <SidebarFooter/>
     </aside>
   );
 }
