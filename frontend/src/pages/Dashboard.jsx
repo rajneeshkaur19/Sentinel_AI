@@ -12,11 +12,15 @@ import Button from"../components/common/Button";
 function Dashboard() {
   return(
     
-    <div className = "space-y-6 p-6">
+    <div className = "space-y-6 p-4 sm:p-6">
+
+      {/* ====================================HERO=======================================*/}
 
       <HeroSection/>
 
-      <div className = "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      {/* ====================================SECURITY OVERVIEW==================================== */}
+
+      <div className = "grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
       <ThreatCard/>
       <ScanCard/>
       <ReportsCard/>
@@ -25,23 +29,17 @@ function Dashboard() {
           <ActivityTable/>
         </div>
       </div>
-      <ThreatChart/>
-      <QuoteCard/>
-      <SafeFilesCard/>
-      <UploadCard/>
 
-      <div className="flex gap-4">
-        <Button>Primary</Button>
-        <Button variant="secondary">
-          Secondary
-        </Button>
-        <Button variant="outline">
-          Outline
-        </Button>
-        <Button variant="danger">
-          Danger
-        </Button>
+      {/* ===============================================THREAT ANALYTICS===========================================*/}
+      <ThreatChart/>
+
+      {/* =========================================FILE SECURITY===================================*/}
+      <div className = "grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <SafeFilesCard/>
+        <UploadCard/>
       </div>
+      {/* ================================== SECURITY INSIGHT =======================*/}
+      <QuoteCard/>
     </div>   
 
   );
